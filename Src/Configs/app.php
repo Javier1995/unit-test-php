@@ -3,10 +3,10 @@ return [
 
     'app_name'=> 'Bug Reports App',
     
-    'env'=> 'local',
+    'env'=> 'dev',
     
     'debug'=>true,
     
-    'log_path'=> __DIR__.'/../Looger'
+    'log_path'=> __DIR__.'/../Logger'
 
 ];

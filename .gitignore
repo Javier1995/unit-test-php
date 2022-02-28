@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 /vendor
-=======
-/vendor/
->>>>>>> exceptions
+/Src/Logger/*.log

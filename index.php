@@ -1,15 +1,19 @@
 <?php
-
-
-
 declare(strict_types = 1);
 require_once __DIR__.'/vendor/autoload.php';
-
-set_exception_handler([new \App\Exception\ExceptionHandler(), 'handler' ]);
-
-$config = \App\Helpers\Config::getFileContent('dsd');
-
-$applications = new \App\Helpers\App();
+require_once __DIR__.'/Src/Exception/exception.php';
 
 
-var_dump($applications->getServerTime()->format('Y-m-d H:i:s'));
+$logger = new \App\Logger\Logger();
+
+$logger->log(
+    \App\Logger\LogLevel::EMERGENCY, 
+    'There is an emergency', 
+    ['Excepction'=>'Exception occured']
+);
+
+
+$logger->info(
+    'This is a info data',
+    ['id'=>'6']
+);

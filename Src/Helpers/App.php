@@ -43,7 +43,7 @@ class App
         return $this->config['log_path'];
     }
 
-    public function isRunningFromConsole(): boolean
+    public function isRunningFromConsole(): bool
     {
         return php_sapi_name() == 'cli' || php_sapi_name() == 'phpbg';
     }

@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Exception;
 
 use Exception;
@@ -10,8 +10,8 @@ abstract class BaseException extends Exception
     protected $data = [];
 
     public function __construct(
-        string $message,
-        array $data, 
+        string $message = '',
+        array $data = [], 
         int $code = 0, 
         Throwable $previous = null
     )
